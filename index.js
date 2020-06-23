@@ -31,7 +31,7 @@ function displayResults(responseJson) {
   $('#results').removeClass('hidden');
 };
 
-function getYouTubeVideos(query, maxResults=10) {
+function getNationalParks(query, maxResults=10) {
   const params = {
     stateCode: query,
     limit: maxResults,
@@ -61,7 +61,7 @@ function watchForm() {
     event.preventDefault();
     const searchTerm = $('#js-search-term').val();
     const maxResults = $('#js-max-results').val();
-    getYouTubeVideos(searchTerm, maxResults);
+    getNationalParks(searchTerm, maxResults);
   });
 }
 
